@@ -5,10 +5,10 @@ import {Box, Button, Paper, Step, StepContent, StepLabel, Stepper, Typography} f
 const StepList = ({activeStep, steps,
                       handleNext,handleBack,handleReset}) => {
   return(
-      <>
-          <Stepper activeStep={activeStep} orientation="vertical" >
+      <Box ml={-3} pl={4} pt={2} sx={{ maxWidth: "100%", background: "#1E2235"}}>
+          <Stepper activeStep={activeStep} orientation="vertical" color={"white"}>
               {steps.map((step, index) => (
-                  <Step key={step.key}>
+                  <Step key={step.key} >
                       <StepLabel
                           optional={
                               index === 2 ? (
@@ -18,9 +18,9 @@ const StepList = ({activeStep, steps,
                       >
                           {step.text}
                       </StepLabel>
-                      <StepContent >
+                      <StepContent>
                           <Typography sx={{color: "white"}}>{step.text}</Typography>
-                          <Box sx={{ mb: 2 }}>
+                          <Box sx={{ mb: 2 }} >
                               <div>
                                   <Button
                                       variant="contained"
@@ -50,7 +50,7 @@ const StepList = ({activeStep, steps,
                   </Button>
               </Paper>
           )}
-      </>
+      </Box>
   )
 }
 

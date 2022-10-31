@@ -12,7 +12,7 @@ const NavBar = ({children})=>{
             <Container maxWidth={"xl"} sx={{
                 background: "#1E2235",
                 color: "white",
-                height: "12vh"
+                height: "12vh",
             }}>
                <Grid container>
                    <Grid xs={10}>
@@ -54,7 +54,8 @@ const NavBar = ({children})=>{
             </Container>
             <Container maxWidth={'xl'} sx={{
                 color: "white",
-                background: "#171A2B"
+                background: "#171A2B",
+                paddingBottom: 10
             }}>
                 {children}
             </Container>
