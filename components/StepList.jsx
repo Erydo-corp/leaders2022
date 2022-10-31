@@ -16,10 +16,11 @@ const StepList = ({activeStep, steps,
                               ) : null
                           }
                       >
-                          {step.text}
+                          <Typography sx={{color: 'white'}}>
+                              {step.text}
+                          </Typography>
                       </StepLabel>
                       <StepContent>
-                          <Typography sx={{color: "white"}}>{step.text}</Typography>
                           <Box sx={{ mb: 2 }} >
                               <div>
                                   <Button
@@ -42,16 +43,17 @@ const StepList = ({activeStep, steps,
                   </Step>
               ))}
           </Stepper>
-          {activeStep === steps.length && (
-              <Paper square elevation={0} sx={{ p: 3 }}>
-                  <Typography>All steps completed - you&apos;re finished</Typography>
-                  <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-                      Reset
-                  </Button>
-              </Paper>
-          )}
       </Box>
   )
 }
+
+// {activeStep === steps.length && (
+//               <Paper square elevation={0} sx={{ p: 3 }}>
+//                   <Typography>All steps completed - you&apos;re finished</Typography>
+//                   <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
+//                       Reset
+//                   </Button>
+//               </Paper>
+//           )}
 
 export default StepList
