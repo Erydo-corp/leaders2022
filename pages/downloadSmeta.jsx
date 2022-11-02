@@ -28,13 +28,11 @@ const DownloadSmeta = () => {
         <Grid container>
             <Grid xs={2.5}>
                 <StepList activeStep={activeStep}
-                          steps={steps}
-                          handleBack={handleBack}
-                          handleReset={handleReset}
-                          handleNext={handleNext}/>
+                          steps={steps}/>
             </Grid>
-            <Grid xs={4}>
-                <DownloadForm/>
+            <Grid xs={9}>
+                <DownloadForm  handleBack={handleBack}
+                               handleNext={handleNext}/>
             </Grid>
         </Grid>
     );

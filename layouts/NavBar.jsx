@@ -55,7 +55,7 @@ const NavBar = ({children})=>{
             <Container maxWidth={'xl'} sx={{
                 color: "white",
                 background: "#171A2B",
-                paddingBottom: 10
+                paddingBottom: 15,
             }}>
                 {children}
             </Container>

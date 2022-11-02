@@ -2,10 +2,17 @@ import {Box, Button, Paper, Step, StepContent, StepLabel, Stepper, Typography} f
 
 //Компонент с отрисовкой шагов
 
-const StepList = ({activeStep, steps,
-                      handleNext,handleBack,handleReset}) => {
+const StepList = ({activeStep, steps}) => {
+
   return(
-      <Box ml={-3} pl={4} pt={2} sx={{ maxWidth: "100%", background: "#1E2235"}}>
+      <Box ml={-3} pl={4} mt={3} pt={5}
+           sx={{
+               maxWidth: "100%",
+               background: "#1E2235",
+               height: "75vh",
+               borderBottomRightRadius: 30,
+               borderTopRightRadius: 30
+           }}>
           <Stepper activeStep={activeStep} orientation="vertical" color={"white"}>
               {steps.map((step, index) => (
                   <Step key={step.key} >
@@ -20,26 +27,6 @@ const StepList = ({activeStep, steps,
                               {step.text}
                           </Typography>
                       </StepLabel>
-                      <StepContent>
-                          <Box sx={{ mb: 2 }} >
-                              <div>
-                                  <Button
-                                      variant="contained"
-                                      onClick={handleNext}
-                                      sx={{ mt: 1, mr: 1 }}
-                                  >
-                                      {index === steps.length - 1 ? 'Finish' : 'Continue'}
-                                  </Button>
-                                  <Button
-                                      disabled={index === 0}
-                                      onClick={handleBack}
-                                      sx={{ mt: 1, mr: 1 }}
-                                  >
-                                      Back
-                                  </Button>
-                              </div>
-                          </Box>
-                      </StepContent>
                   </Step>
               ))}
           </Stepper>
