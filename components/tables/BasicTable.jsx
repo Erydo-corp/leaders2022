@@ -1,6 +1,6 @@
 import React from 'react';
 import { TableContainer, Table, TableHead, TableBody, TableRow, TableCell, TableFooter, Paper } from '@mui/material';
-import Pagination from './Pagination';
+import { MyPagination } from './MyPagination';
 
 export const BasicTable = ({columns, data}) => {
   return(
@@ -35,7 +35,7 @@ export const BasicTable = ({columns, data}) => {
           }
         </TableBody>
       </Table>
-      <Pagination/>
+      <MyPagination/>
     </TableContainer>
   );
 }
