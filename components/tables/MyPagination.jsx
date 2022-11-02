@@ -9,7 +9,7 @@ export const MyPagination = () => {
         sx={{
           '& .MuiPaginationItem-root': {color: '#fff', borderColor: '#fff'},
           '& .MuiPaginationItem-ellipsis': {color: '#fff'},
-          '& .Mui-selected': {color:'#cc2222', background: '#fff'},
+          '& .Mui-selected': {color:'red', background: '#fff'},
         }}/>
       </Stack>
     </Box>
