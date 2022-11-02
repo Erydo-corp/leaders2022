@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const navData = [
     {key: 1, text: "Сметы", href: "/smeta"},
-    {key: 2, text: "Справочники", href: ""},
+    {key: 2, text: "Справочники", href: "/handbook"},
 ]
 
 const NavBar = ({children})=>{
