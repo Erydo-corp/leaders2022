@@ -1,6 +1,6 @@
 import {Button, Container, Grid, Typography} from "@mui/material";
 import Link from "next/link";
-
+import { TableInfo } from "../components/tables/TableInfo";
 
 const Smeta = () => {
   return(
@@ -29,6 +29,11 @@ const Smeta = () => {
                         Загрузить смету
                     </Button>
                 </Link>
+            </Grid>
+            
+            <Grid xs={12}>
+                {/* Вывод таблицы */}
+                <TableInfo />
             </Grid>
         </Grid>
   )
