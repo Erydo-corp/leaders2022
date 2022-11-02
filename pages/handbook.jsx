@@ -13,22 +13,8 @@ const Smeta = () => {
                     fontSize: 35,
                     fontWeight: 600
                 }}>
-                    Сметы
+                    Справочник шаблонов
                 </Typography>
-            </Grid>
-            <Grid mt={5}>
-                <Link href="/downloadSmeta">
-                    <Button sx={{
-                        background: "#2563EB",
-                        color: 'white',
-                        "&: hover": {
-                            background: "#2563EB",
-                            color: "white",
-                        }
-                    }}>
-                        Загрузить смету
-                    </Button>
-                </Link>
             </Grid>
             
             <Grid xs={12}>
