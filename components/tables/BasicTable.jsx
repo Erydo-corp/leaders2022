@@ -1,8 +1,6 @@
 import React from 'react';
 import { TableContainer, Table, TableHead, TableBody, TableRow, TableCell, TableFooter, Paper } from '@mui/material';
-import usePagination from '@mui/material/usePagination';
-import { styled } from '@mui/material/styles';
-
+import Pagination from './Pagination';
 
 export const BasicTable = ({columns, data}) => {
   return(
@@ -36,10 +34,8 @@ export const BasicTable = ({columns, data}) => {
             ))
           }
         </TableBody>
-        <TableFooter sx={{ backgroundColor: '#cc2222', }}>
-          
-        </TableFooter>
       </Table>
+      <Pagination/>
     </TableContainer>
   );
 }
