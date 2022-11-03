@@ -1,8 +1,9 @@
 import React from 'react';
-import { Grid, TableContainer, Table, Paper } from '@mui/material';
+import { Grid, TableContainer, Table, Paper, Box } from '@mui/material';
 import { HeaderTable } from '../components/tables/HeaderTable';
 import { BodyTableSelect } from '../components/tables/BodyTableSelect';
 import { MyPagination } from '../components/tables/MyPagination';
+import BasicButton from '../components/buttons/BasicButton';
 
 const columns = [
   { id: 'nameWorks', label: 'Ключевое наименование работ' },
@@ -61,12 +62,23 @@ const determinationSmeta = () => {
     <Grid container>
       <Grid xs={3}></Grid>
       <Grid xs={9}>
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} sx={{position: 'relative'}}>
           <Table>
             <HeaderTable columns={columns}/>
               <BodyTableSelect data={data}/>
           </Table>
           <MyPagination />
+          <Box 
+            sx={{
+              position: 'absolute',
+              display: 'flex',
+              columnGap: 2,
+              bottom: '20px',
+              right: '20px'
+            }}>
+            <BasicButton text="Назад"/>
+            <BasicButton text="Далее"/>
+          </Box>
         </TableContainer>
       </Grid>
     </Grid>
