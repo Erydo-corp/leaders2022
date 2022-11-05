@@ -1,5 +1,6 @@
 import {Box, Button, Paper, Step, StepContent, StepLabel, Stepper, Typography} from "@mui/material";
 
+//Компонент с отрисовкой шагов
 
 const StepList = ({activeStep, steps,
                       handleNext,handleBack,handleReset}) => {
