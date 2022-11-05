@@ -61,7 +61,7 @@ const determinationSmeta = () => {
   return(
     <Grid container>
       <Grid xs={3}></Grid>
-      <Grid xs={9}>
+      <Grid xs={9} mt={4}>
         <TableContainer component={Paper} sx={{position: 'relative'}}>
           <Table>
             <HeaderTable columns={columns}/>
