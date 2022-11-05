@@ -17,7 +17,9 @@ export const DotsMenu = ({active, setActive}) => {
         right: 20,
         borderRadius: 2,
         color: '#fff',
-        background: '#cc2222',
+        background: "#252A41",
+        boxShadow: "0px 20px 25px -5px rgba(0, 0, 0, 0.1)," +
+            " 0px 8px 10px -6px rgba(0, 0, 0, 0.1)",
         zIndex: 10,
       }}>
       <List onClick={event => event.stopPropagation()}
@@ -28,21 +30,24 @@ export const DotsMenu = ({active, setActive}) => {
         <ListItemIcon>
           <ModeOutlinedIcon fontSize='small' color='white'/>
         </ListItemIcon>
-        <ListItemText primary="Редактировать" sx={{'& .MuiListItemText-primary':{fontSize: '9px'}}}/>
+        <ListItemText primary="Редактировать" sx={{
+            '& .MuiListItemText-primary':{fontSize: '12px'}}}/>
       </ListItemButton>
 
       <ListItemButton>
         <ListItemIcon>
           <CachedIcon fontSize='small' color='white'/>
         </ListItemIcon>
-        <ListItemText primary="Обновить" sx={{'& .MuiListItemText-primary':{fontSize: '9px'}}}/>
+        <ListItemText primary="Обновить" sx={{
+            '& .MuiListItemText-primary':{fontSize: '12px'}}}/>
       </ListItemButton>
 
       <ListItemButton>
         <ListItemIcon>
           <DeleteForeverOutlinedIcon fontSize='small' color='white'/>
         </ListItemIcon>
-        <ListItemText primary="Удалить" sx={{'& .MuiListItemText-primary':{fontSize: '9px'}}}/>
+        <ListItemText primary="Удалить"
+                      sx={{'& .MuiListItemText-primary':{fontSize: '12px'}}}/>
       </ListItemButton>
     </List>
     </Box>

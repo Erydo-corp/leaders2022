@@ -5,10 +5,15 @@ export const HeaderTable = ({columns}) => {
   return(
     <TableHead>
           <TableRow
-          sx={{ backgroundColor: '#cc2222', }}>
+          sx={{ backgroundColor: "#252A41"}}>
             {columns.map((col) => (
-              <TableCell key={col.id} sx={{ color: '#fff', }}>
-                {col.label}
+              <TableCell key={col.id}
+                         sx={{
+                             marginLeft: 10,
+                             color: '#fff',
+                             background: "#252A41"
+                         }}>
+                {col.label }
               </TableCell>
             ))}
           </TableRow>
