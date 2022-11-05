@@ -2,13 +2,21 @@ import {Box, Button, Paper, Step, StepContent, StepLabel, Stepper, Typography} f
 
 //Компонент с отрисовкой шагов
 
-const StepList = ({activeStep, steps,
-                      handleNext,handleBack,handleReset}) => {
+
+const StepList = ({activeStep, steps}) => {
+
   return(
-      <>
-          <Stepper activeStep={activeStep} orientation="vertical" >
+      <Box ml={-3} pl={4} mt={3} pt={5}
+           sx={{
+               maxWidth: "100%",
+               background: "#1E2235",
+               height: "75vh",
+               borderBottomRightRadius: 30,
+               borderTopRightRadius: 30
+           }}>
+          <Stepper activeStep={activeStep} orientation="vertical" color={"white"}>
               {steps.map((step, index) => (
-                  <Step key={step.key}>
+                  <Step key={step.key} >
                       <StepLabel
                           optional={
                               index === 2 ? (
@@ -16,42 +24,24 @@ const StepList = ({activeStep, steps,
                               ) : null
                           }
                       >
-                          {step.text}
+                          <Typography sx={{color: 'white'}}>
+                              {step.text}
+                          </Typography>
                       </StepLabel>
-                      <StepContent >
-                          <Typography sx={{color: "white"}}>{step.text}</Typography>
-                          <Box sx={{ mb: 2 }}>
-                              <div>
-                                  <Button
-                                      variant="contained"
-                                      onClick={handleNext}
-                                      sx={{ mt: 1, mr: 1 }}
-                                  >
-                                      {index === steps.length - 1 ? 'Finish' : 'Continue'}
-                                  </Button>
-                                  <Button
-                                      disabled={index === 0}
-                                      onClick={handleBack}
-                                      sx={{ mt: 1, mr: 1 }}
-                                  >
-                                      Back
-                                  </Button>
-                              </div>
-                          </Box>
-                      </StepContent>
                   </Step>
               ))}
           </Stepper>
-          {activeStep === steps.length && (
-              <Paper square elevation={0} sx={{ p: 3 }}>
-                  <Typography>All steps completed - you&apos;re finished</Typography>
-                  <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-                      Reset
-                  </Button>
-              </Paper>
-          )}
-      </>
+      </Box>
   )
 }
+
+// {activeStep === steps.length && (
+//               <Paper square elevation={0} sx={{ p: 3 }}>
+//                   <Typography>All steps completed - you&apos;re finished</Typography>
+//                   <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
+//                       Reset
+//                   </Button>
+//               </Paper>
+//           )}
 
 export default StepList

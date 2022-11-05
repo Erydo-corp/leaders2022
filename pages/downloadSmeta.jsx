@@ -1,6 +1,7 @@
 import {useState} from "react";
-import {Box, Button, Paper, Step, StepContent, StepLabel, Stepper, Typography} from "@mui/material";
+import {Box, Button, Container, Grid, Paper, Step, StepContent, StepLabel, Stepper, Typography} from "@mui/material";
 import StepList from "../components/StepList";
+import DownloadForm from "../components/DownloadForm";
 
 const steps = [
     {key: 1, text: "Загрузка сметы"},
@@ -24,13 +25,16 @@ const DownloadSmeta = () => {
     };
 
     return (
-        <Box sx={{ maxWidth: 400}}>
-            <StepList activeStep={activeStep}
-                      steps={steps}
-                      handleBack={handleBack}
-                      handleReset={handleReset}
-                      handleNext={handleNext}/>
-        </Box>
+        <Grid container>
+            <Grid xs={2.5}>
+                <StepList activeStep={activeStep}
+                          steps={steps}/>
+            </Grid>
+            <Grid xs={9}>
+                <DownloadForm  handleBack={handleBack}
+                               handleNext={handleNext}/>
+            </Grid>
+        </Grid>
     );
 }
 
