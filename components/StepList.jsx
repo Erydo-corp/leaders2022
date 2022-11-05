@@ -2,6 +2,7 @@ import {Box, Button, Paper, Step, StepContent, StepLabel, Stepper, Typography} f
 
 //Компонент с отрисовкой шагов
 
+
 const StepList = ({activeStep, steps}) => {
 
   return(
